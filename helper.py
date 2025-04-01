@@ -1,7 +1,9 @@
 """This module contains the helper functions for the Bulls & Cows game."""
+
 import random
 
 DASH_SEPARATOR = '-' * 47
+
 
 def generate_number(num_digits=4) -> str:
     """Generates a random four-digit number with unique digits
@@ -19,6 +21,7 @@ def generate_number(num_digits=4) -> str:
 
         if gen_number[0] != '0':
             return gen_number
+
 
 def players_guess(num_digits: int) -> str:
     """Gets input from the player.
@@ -50,6 +53,7 @@ def players_guess(num_digits: int) -> str:
              "with \"0\" and each digit must be unique."
             )
 
+
 def calculate_guesses(gen_number, guess) -> tuple[int, int]:
     """Calculates the number of bulls and cows.
     
@@ -71,6 +75,7 @@ def calculate_guesses(gen_number, guess) -> tuple[int, int]:
 
     return bulls, cows
 
+
 def results(bulls, cows):
     """Prints the results.
     
@@ -82,6 +87,7 @@ def results(bulls, cows):
     cow_num = "cow" if cows == 1 else "cows"
 
     print(f"{bulls} {bull_num}, {cows} {cow_num}")
+
 
 def play_game(num_digits=4):
     """The main game function.
